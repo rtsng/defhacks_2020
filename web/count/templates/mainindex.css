@@ -1,0 +1,23 @@
+h3 {
+    background-color: #228B22;
+    color: #FFFFFF;
+    font-size: 30px;
+}
+
+p {
+    background-color: #FFFFFF;
+    color: #000000;
+    width: 75%;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.container{
+    width = 500px
+    clear: both;
+}
+
+.container input {
+    width = 100%
+    clear: both;
+}
