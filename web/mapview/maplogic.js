@@ -20,7 +20,7 @@ var locations = [
     ['Harbourfront Park', 43.2716, -79.8724, "/web/locations/harbourfront.html"],
     ['Sunnybrook Park', 43.7243, -79.3580, "/web/locations/sunnybrook.html"],
     ['Dufferin Grove Park', 43.6566, -79.4328, "/web/locations/dufferin.html"],
-    ['Ashbridges Bay', 43.6618, -79.3117, "/web/locations/ashbridges.html"]
+    ['Ashbridges Bay', 43.6618, -79.3117, "/web/locations/ashbridgesbay.html"]
     
 ];
 
