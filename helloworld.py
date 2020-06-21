@@ -8,18 +8,18 @@ def registerUser():
     file.write("\n")
     file.close()
     if login():
-        print("You are now logged in...")
+        print("You are logged in.")
     else:
-        print("You aren't logged in!")
+        print("Incorrect. Please try again.")
 
 
 def login():
     user = input("Input a username: ")
     password = input("Input a password: ")
     for account in open("accounts.txt", "r").readlines():
-        logininfo = account.split()
-        if user == logininfo[0] and password ==logininfo[1]:
-            print("You are now logged in.")
+        loginaccount = account.split()
+        if user == loginaccount[0] and password ==loginaccount[1]:
+            print("You are logged in.")
             return True
         else:
             print("Incorrect. Please try again.")
