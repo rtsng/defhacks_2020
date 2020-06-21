@@ -1,19 +1,18 @@
 <!DOCTYPE html>
+
 <html>
   <head>
-    <title>Simple Map</title>
+    
+    <title>Google Maps Multiple Markers</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAz8l9F66ockvkOeEMZL0C6dBnvbYI7crE&callback=initMap&libraries=&v=weekly"
-      defer
-    ></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAz8l9F66ockvkOeEMZL0C6dBnvbYI7crE&callback=initMap&libraries=&v=weekly" type="text/javascript"></script>
     <style type="text/css">
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
       #map {
         height: 100%;
       }
-
+    
       /* Optional: Makes the sample page fill the window. */
       html,
       body {
@@ -25,22 +24,59 @@
     <script>
       (function(exports) {
         "use strict";
-
+  
         function initMap() {
           exports.map = new google.maps.Map(document.getElementById("map"), {
             center: {
-              lat: 43.6532,
-              lng: -79.3832
+              lat: -34.397,
+              lng: 150.644
             },
             zoom: 8
           });
         }
-
+  
         exports.initMap = initMap;
       })((this.window = this.window || {}));
     </script>
   </head>
   <body>
-    <div id="map"></div>
+    <div id="map">
+  </div>
+  <script type="text/javascript">
+      var locations = [
+        ['High Park', 43.6465, -79.4637],
+        ['St Roberts', 43.8352, -79.3774],
+        ['Library', 43.8194, -79.4002]
+      ];
+
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 10,
+        center: new google.maps.LatLng(43.6532, -79.3832),
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      });
+
+      var infowindow = new google.maps.InfoWindow();
+
+      var marker, i;
+
+      for (i = 0; i < locations.length; i++) { 
+        marker = new google.maps.Marker({
+          position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+          map: map
+        });
+
+        google.maps.event.addListener(marker, 'click', (function(marker, i) {
+          return function() {
+            infowindow.setContent(locations[i][0]);
+            infowindow.open(map, marker);
+          }
+        })(marker, i));
+      }
+    </script>
+    
   </body>
 </html>
+
+
+
+
