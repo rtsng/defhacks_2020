@@ -1,0 +1,18 @@
+h1{
+    font-family: avenir;
+    color: lightskyblue;
+    font-size: 70px;
+   }
+
+h2{
+    font-family: avenir;
+    color: brown;
+    font-size: 20px;
+}
+
+
+}
+p {
+    margin-top: 30px;
+    margin-left: 100px;
+}
