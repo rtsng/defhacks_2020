@@ -1,20 +1,40 @@
 <html>
-  <head>
-    <link href="mainpage.css" rel="stylesheet" type="text/css">
-  </head>
-  <body>
-    <h1>WEBSITE MAP AND STUFF</h1>
-    
-    <div id="mymap">
-      
-    </div>
-  
-    <div id="links">  
-      <a href="/web/input.html">Going somehwere new?</a>
-      <a href="/web/mapview/mapview.html">Want to view the map?</a>
-    </div>
+<head>
+<style>
+.container {
+  position: relative;
+  text-align: center;
+  color:black;
+  font-family: Tahoma, Verdana, sans-serif;
+}
 
-  </body>
-</html>
+.bottom-center {
+  position: absolute;
+  bottom: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
 
+.centered {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 83px;
+}
+</style>
+</head>
+<body>
+
+
+<div class="container">
+  <img src="https://media.wired.com/photos/59269cd37034dc5f91bec0f1/master/pass/GoogleMapTA.jpg" alt="Snow" style="width:100%;">
+  <div class="bottom-center"> 
+    <a href="/web/input.html">Going somehwere new?</a>
+    <a href="/web/mapview/mapview.html">View map</a></div>
+  <div class="centered">Website Map</div>
+</div>
+
+</body>
+</html> 
 

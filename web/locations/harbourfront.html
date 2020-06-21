@@ -1,39 +1,130 @@
-
-<!DOCTYPE HTML>
 <html>
-    <head>
-        <link href="harbourfront.css" rel="stylesheet" type="text/css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.js"></script>
-        <div class="container">
-        <h2>bar graph</h2>
-        <div>
-            <canvas id="canvas" width="250" height="250"></canvas>
-        </div>
-        </div>
-        <script>
-            var mydata = [5, 10, 25, 12, 123, 230, 129, 230, 12, 23, 12, 23, 30, 40];
-            var chr = document.getElementById("canvas");
-            var ctx = canvas.getContext("2d");
-            var data = {
-                type: "bar",
-                data: {
-                    labels: ["1:00", "2:00", "3:00", "4:00", "5:00", "6:00", "7:00", "8:00", "9:00", "10:00", "11:00", "12:00", "13:00", "14:00"],
-                    datasets: [{
-                    label: "Number of people",
-                    backgroundColor: "#F7464A",
-                    fillColor: "blue",
-                    strokeColor: "green",
-                    data: mydata
-                    }]
-                },
-                options: {
-                    responsive: false
-                }
-            };
-            var myfirstChart = new Chart(ctx, data);
-        </script>
-    </head>
-    <body>
-        <h1>harbour front</h1>
-    </body>
-</html>
+<head>
+<style>
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+  text-shadow: 6px 6px 8px #000000;
+  font-family: Tahoma, Verdana, sans-serif;
+}
+
+.bottom-center {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
+
+.centered {
+  position: absolute;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 85px;
+}
+</style>
+</head>
+<body>
+
+
+<div class="container">
+  <img src="https://www.urbaneer.com/media/uploads/main_uploads/1SkylineView_NoRIghts.jpg" alt="Snow" style="width:100%;">
+  <div class="bottom-center">Harbourfront Centre is a key cultural organization on the waterfront of Toronto, Ontario, Canada, situated at 235 Queens Quay West.</div>
+  <div class="centered">Harbourfront Centre</div>
+</div>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+</head>
+<body>
+
+<div class="row">
+  <div class="column">
+    <h2>Operating Hours</h2>
+    <p>Some random text..</p>
+  </div>
+  <div class="column">
+    <h2>Popular Times</h2>
+    <p>Some text..</p>
+  </div>
+</div>
+
+
+<h2>Reviews</h2>
+<h3
+  <div style="width:100%; height:100; overflow-y:scroll" >
+    Grace: I absolutely loved this place! We decided to come here 
+    on a whim and my family definitely enjoyed their time here. 
+    The children had fun swimming while the rest of us 
+    relaxed on the beach. Will definitely be coming back next year!
+    
+    John: I really miss living in High Park. My second year of 
+    living in this city, I lived in a condo that overlooked the 
+    entire park facing south and every morning I would wake up 
+    to the sight of green (white if it was winter) and the blue 
+    horizon of the lake. High Park is the best park in Toronto 
+    to spend a whole day in. Take your kids, take your dog, take
+    your mom. There are many kms of trails that zig zag your way 
+    through the park and you might even come on to some hidden 
+    gems that you didn't know about. Like the mini zoo (though 
+    now closed due to the pandemic) known for its notorious escaping 
+    jailbirds (hah- pun intended) like the screaming peacock screaming
+    its lungs out as it roamed the neighborhood for weeks before the
+    authorities caught up with him. Or the pair of Capybaras that 
+    made the lake inside the park their vacation resort. The park 
+    is also the best place to catch Cherry Blossoms every year in 
+    spring, however I doubt you'll see many this year due to the 
+    social distancing restrictions. Plan to spend the day there, 
+    just take a picnic basket, some blankets, some wine and water 
+    and you will not regret getting lost in all the green and forget 
+    that you are dead centre of a bustling city.
+    PS. It's a great place to take engagement pictures as well!
+    
+    Steven: Well, this is my hood. Definitely my number one park in 
+    Toronto. Ideal for walking and for hanging out with friends and 
+    family. High Park is home for many festivals and activities during
+    the year. If you are visiting the park on the weekends during spring
+    and summer months it is not easy to find a parking spot. You can enter 
+    the park from a few sides but the main entrance is from Bloor Street 
+    West. There is also Zoo inside the park with free admission.
+    The Grenadier Cafe is located in the heart of the park so if you 
+    wanna coffee or some food this place is good for it. It is very 
+    expensive but they have a cool location inside the park with a 
+    nice patio area in front. If you like fishing there are some cool 
+    spots for that. Cherry blossom is one of my favorite festivals in 
+    High Park. Keep in mind if you are planning to visit this festival 
+    it is very crowded and it is impossible to find the parking.
+    
+    Calvin: 
+    I had a 5 hour layover. I wanted to go out and see something in 
+    Toronto. I had to clear American AND Canadian customs at that time, 
+    I wanted at least 3 hours for that. So what did I do? I called an Uber 
+    and went to High Park. It's so beautiful! It's huge! The squirrels there 
+    are black (seriously!!!). I wish I could've seen more of Toronto, but this
+    park, with its lakes, it's hills, it's gardens...was just delightful.
+    
+     </div></h3>
+
+</body>
+</html> 
