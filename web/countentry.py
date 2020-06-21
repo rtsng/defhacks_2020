@@ -41,6 +41,7 @@ def over(location):
     else:
         return = False
 
+#not done
 def remove_count(location, userentry):
     if location in personr.read() and userentry in personr.read():
         for line in personr:
