@@ -34,14 +34,17 @@ hr {
   width: 100%;
   opacity: 0.9;
   float: left;
+<<<<<<< HEAD
   align = "center"
   width: 50%;
+=======
+>>>>>>> 1b7a586fb6771bd8949acac0219b6f3ca24105fa
 }
 
 .loginbtn {
-    width: 16%;
-    margin-left: 42%;
-    margin-right: 42%;
+    width: 18%;
+    margin-left: 41%;
+    margin-right: 41%;
     background-color: white;
     color: black;
     padding: 0;
