@@ -1,0 +1,49 @@
+h1{
+    color: black;
+    font-size: 100px;
+    left: 0;
+    line-height: 200px;
+    margin-top: -100px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 100%;
+    font-family: avenir;
+}
+#links{
+    font-family: avenir;
+    font-size: 30px;
+    position:absolute;
+    bottom:0;
+    right:0;
+}
+#mymap{
+    font-family: avenir;
+    position: relative;
+    bottom: 0;
+    left:0;
+}
+
+h2{
+    font-family: cursive;
+    color: limegreen;
+    font-size: 200px;
+}
+
+p {
+    margin-top: 30px;
+    margin-left: 100px;
+}
+/* Always set the map height explicitly to define the size of the div
+* element that contains the map. */
+#map {
+    height: 100%;
+}
+
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
