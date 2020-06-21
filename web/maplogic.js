@@ -17,7 +17,8 @@
 var locations = [
     ['High Park', 43.6465, -79.4637, "/web/highpark.html"],
     ['St Roberts', 43.8352, -79.3774, 2],
-    ['Library', 43.8194, -79.4002, 3]
+    ['Library', 43.8194, -79.4002, 3],
+    ['Toronto Zoo', 43.8177, -79.1859, "/web/torzoo.html"]
 ];
 
 var map = new google.maps.Map(document.getElementById('map'), {
