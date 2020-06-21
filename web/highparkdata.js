@@ -1,30 +1,47 @@
-function csvJSON(csv){
-
-    var lines=csv.split("\n");
-  
-    var result = [];
-  
-    // NOTE: If your columns contain commas in their values, you'll need
-    // to deal with those before doing the next step 
-    // (you might convert them to &&& or something, then covert them back later)
-    // jsfiddle showing the issue https://jsfiddle.net/
-    var headers=lines[0].split(",");
-  
-    for(var i=1;i<lines.length;i++){
-  
-        var obj = {};
-        var currentline=lines[i].split(",");
-  
-        for(var j=0;j<headers.length;j++){
-            obj[headers[j]] = currentline[j];
-        }
-  
-        result.push(obj);
-  
+class Place{
+    set Locations(Locations){
+        this._Locations=Locations;
     }
-  
-    //return result; //JavaScript object
-    return JSON.stringify(result); //JSON
+    set Latitude(Latitude){
+        this._Latitude=Latitude;
+    }
+    set Longitude(Longitude){
+        this._Longitude=Longitude;
+    }
+    get Locations(){
+        return this._Locations;
+    }
+    get Latitude(){
+        return this._Latitude;
+    }
+    get Longitude(){
+        return this._Longitude;
+    }
+    constructor(){
+    }
 }
+let pl=[];// Array to store Employee Objects
+const csv=require('csvtojson')
+// Invoking csv returns a promise
+const converter=csv()
+.fromFile('./web/locationsll.csv')
+.then((json)=>{
+    let e;
+    json.forEach((row)=>{
+        e=new Place();// New Employee Object
+        Object.assign(e,row);// Assign json to the new Employee
+        pl.push(e);// Add the Employee to the Array
+        
+    });
+}).then(()=>{
+    // Output the names of the Employees
+    // emp.forEach((em)=>{
+    //     console.log(em.Latitude);// Invoke the Name getter
+    // });
+    for (i = 0; i < 6; i++){
+        console.log("Location: " + pl[i].Locations);
+        console.log("Latidude: " + pl[i].Latitude);
+        console.log("Longitude: " + pl[i].Longitude);
+    }
+});
 
-x = csvJSON(countdata.csv)
