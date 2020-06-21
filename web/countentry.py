@@ -3,42 +3,20 @@ import time
 import sys
 personr = open('countdata.csv', 'r')
 persone = open('countdata.csv', 'a')
-passwordr = open('passwords.csv', 'r')
-passworde = open('passwords.csv', 'a')
-
-#this will be changed to being an input from the website
-username = raw_input("What is your username?")
-#this will be changed to being an input from the website
-password = raw_input("What is your password?")
-sequence = str(username) + str(password)
-
-#this will be changed to being an input from the website
-num = raw_input("How many people are in your party?")
-#this will be changed to being an input from the website
-location = raw_input("What is the location you are travelling to?")
-username = raw_input("What is your username?")
-password = raw_input("What is your password?")
-
-#login function, ensure that password username combination is correct
-def validate_user(sequence):
-    valid = False
-    if sequence in passwordr.read():
-        valid = True
-    else:
-        print("Your password and username combination does not exist.")
-    return valid
-
-def create_user(username, password):
-    passworde.write(str(username) + "," + str(password) + "\n")
+activeusere = open('activeuser.csv', 'a')
+activeuserr = open('activeuser.csv', 'r')
 
 #adding information on the number of people in your group heading to a specific location
-def add_count(num):
+def add_count(username, num):
     if location in personr.read():
         for line in personr:
             if line.startswith(location):
-                persone.write(',' + str(num))
+                addnum = True
+                persone.write("," + str(username) + ' ' + str(num))
+                split_line_data = line.split(",")
+                userentry = split_line_data[-1]
     else:
-        print("You did not enter a valid location, please return go to our location entry page.")
+        print("You did not enter a valid location, please return  to our location entry page.")
         sys.exit()
 
 #finding the total number of people at a location
@@ -54,4 +32,19 @@ def location_count(location):
         print("This location is not currently listed in the database. Please enter it via our location entry page")
         sys.exit()
     return total_people
-    
+
+#sending a text if number of people is over ten
+def over(location):
+    population = total_people(location)
+    if population >= 250:
+        return True
+    else:
+        return = False
+
+def remove_count(location, userentry):
+    if location in personr.read() and userentry in personr.read():
+        for line in personr:
+            if line.startswith(location):
+                line_remove_version = list(line)
+                user_index = line_remove_version.index(userentry)
+                del(line_remove_version[user_index])
