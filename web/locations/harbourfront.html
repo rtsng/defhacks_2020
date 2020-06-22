@@ -1,37 +1,38 @@
 <html>
 <head>
-<style>
-.container {
-  position: relative;
-  text-align: center;
-  color: white;
-  text-shadow: 6px 6px 8px #000000;
-  font-family: Tahoma, Verdana, sans-serif;
-}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.js"></script>
+  <style>
+  .container {
+    position: relative;
+    text-align: center;
+    color: white;
+    text-shadow: 6px 6px 8px #000000;
+    font-family: Tahoma, Verdana, sans-serif;
+  }
 
-.bottom-center {
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
-  transform: translate(-50%, -50%)
-}
+  .bottom-center {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translate(-50%, -50%)
+  }
 
-.centered {
-  position: absolute;
-  top: 53%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 85px;
-}
-</style>
+  .centered {
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 85px;
+  }
+  </style>
 </head>
 <body>
 
 
 <div class="container">
-  <img src="https://www.urbaneer.com/media/uploads/main_uploads/1SkylineView_NoRIghts.jpg" alt="Snow" style="width:100%;">
-  <div class="bottom-center">Harbourfront Centre is a key cultural organization on the waterfront of Toronto, Ontario, Canada, situated at 235 Queens Quay West.</div>
-  <div class="centered">Harbourfront Centre</div>
+    <img src="https://www.urbaneer.com/media/uploads/main_uploads/1SkylineView_NoRIghts.jpg" alt="Snow" style="width:100%;">
+    <div class="bottom-center">Harbourfront Centre is a key cultural organization on the waterfront of Toronto, Ontario, Canada, situated at 235 Queens Quay West.</div>
+    <div class="centered">Harbourfront Centre</div>
 </div>
 
 
@@ -66,14 +67,40 @@
   </div>
   <div class="column">
     <h2>Popular Times</h2>
-    <p>Some text..</p>
+    <p>
+      <div>
+        <canvas id="canvas" width="250" height="250"></canvas>
+      </div>
+      <script>
+        var mydata = [5, 10, 25, 12, 123, 230, 129, 230, 12, 23, 12, 23, 30, 40];
+        var chr = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+        var data = {
+            type: "bar",
+            data: {
+                labels: ["9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00", "21:00", "22:00"],
+                datasets: [{
+                label: "Number of people",
+                backgroundColor: "#add8e6",
+                fillColor: "blue",
+                strokeColor: "green",
+                data: mydata
+                }]
+            },
+            options: {
+                responsive: false
+            }
+        };
+        var myfirstChart = new Chart(ctx, data);
+      </script>
+    </p>
   </div>
 </div>
 
 
 <h2>Reviews</h2>
 <h3
-  <div style="width:100%; height:100; overflow-y:scroll" >
+  <div style="width:100%; height:100; overflow-y:scroll">
     Grace: I absolutely loved this place! We decided to come here 
     on a whim and my family definitely enjoyed their time here. 
     The children had fun swimming while the rest of us 
@@ -124,7 +151,13 @@
     are black (seriously!!!). I wish I could've seen more of Toronto, but this
     park, with its lakes, it's hills, it's gardens...was just delightful.
     
-     </div></h3>
+  </div></h3>
 
 </body>
 </html> 
+
+
+
+
+
+
