@@ -24,6 +24,9 @@
     transform: translate(-50%, -50%);
     font-size: 85px;
   }
+  h2{
+    font-family: avenir;
+  }
   </style>
 </head>
 <body>
@@ -56,23 +59,39 @@
   display: table;
   clear: both;
 }
+.space { margin-top: 300px; }
+.space2 {margin-top: 220px;}
+#reviews{
+  font-family: avenir;
+  font-weight: 100;
+}
+#random{
+  font-family: avenir;
+  margin-left: 50px;
+}
 </style>
 </head>
 <body>
-
-<div class="row">
+  <div class="space"></div>
+  <div class="row">
   <div class="column">
     <h2>Operating Hours</h2>
-    <p>Some random text..</p>
+    <p id="random">
+      <br>
+      <br>
+      Open 7 days a week! <br>
+      11:00am - 11:00pm
+    </p>
   </div>
   <div class="column">
     <h2>Popular Times</h2>
     <p>
+      
       <div>
         <canvas id="canvas" width="250" height="250"></canvas>
       </div>
       <script>
-        var mydata = [5, 10, 25, 12, 123, 230, 129, 230, 12, 23, 12, 23, 30, 40];
+        var mydata = [0, 0, 120, 135, 179, 194, 172, 142, 110, 91, 105, 124, 111, 85];
         var chr = document.getElementById("canvas");
         var ctx = canvas.getContext("2d");
         var data = {
@@ -80,10 +99,10 @@
             data: {
                 labels: ["9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00", "21:00", "22:00"],
                 datasets: [{
-                label: "Number of people",
-                backgroundColor: "#edc9af",
+                label: "Number of people", 
+                backgroundColor: "#edc9af", 
                 fillColor: "blue",
-                strokeColor: "green",
+                strokeColor: "green", 
                 data: mydata
                 }]
             },
@@ -100,13 +119,14 @@
 
 <h2>Reviews</h2>
 <h3
-  <div style="width:100%; height:100; overflow-y:scroll">
-    Grace: I absolutely loved this place! We decided to come here 
+  <div id="reviews"style="width:100%; height:250; overflow-y:scroll">
+    <strong>Rocky</strong>: I absolutely loved this place! We decided to come here 
     on a whim and my family definitely enjoyed their time here. 
     The children had fun swimming while the rest of us 
     relaxed on the beach. Will definitely be coming back next year!
-    
-    John: I really miss living in High Park. My second year of 
+    <br>
+    <br>
+    <strong>John</strong>: I really miss living in High Park. My second year of 
     living in this city, I lived in a condo that overlooked the 
     entire park facing south and every morning I would wake up 
     to the sight of green (white if it was winter) and the blue 
@@ -127,8 +147,9 @@
     and you will not regret getting lost in all the green and forget 
     that you are dead centre of a bustling city.
     PS. It's a great place to take engagement pictures as well!
-    
-    Steven: Well, this is my hood. Definitely my number one park in 
+    <br>
+    <br>
+    <strong>Steven</strong>: Well, this is my hood. Definitely my number one park in 
     Toronto. Ideal for walking and for hanging out with friends and 
     family. High Park is home for many festivals and activities during
     the year. If you are visiting the park on the weekends during spring
@@ -142,8 +163,9 @@
     spots for that. Cherry blossom is one of my favorite festivals in 
     High Park. Keep in mind if you are planning to visit this festival 
     it is very crowded and it is impossible to find the parking.
-    
-    Calvin: 
+    <br>
+    <br>
+    <strong>Grace</strong>: 
     I had a 5 hour layover. I wanted to go out and see something in 
     Toronto. I had to clear American AND Canadian customs at that time, 
     I wanted at least 3 hours for that. So what did I do? I called an Uber 
@@ -152,6 +174,7 @@
     park, with its lakes, it's hills, it's gardens...was just delightful.
     
   </div></h3>
+  <div class="space2"></div>
 
 </body>
 </html> 
