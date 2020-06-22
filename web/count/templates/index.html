@@ -1,25 +1,32 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="static/test.css">
+    <head style = "font-family: avenir; font-size: 70px">
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="mainindex.css">
+    </head>
         <title>
-            Rocky is cool
+            Data Entry
         </title>
     </head>
     <body>
         <h3>
-            Rocky is cool
+            <center>Sociiz Data Entry</center>
         </h3>
-        <p>
-            Please enter the location you are heading to and the number of people in your party!<br>
-            Login in the box below.<br>
-            <form action="/addcount" method="post">
-                Location: <input type="text" name="location">  <br />
-                Number of People: <input type="number" name="num" />
-                Username: <input type="text" name = "user" />
-                Password: <input type="text" name = "password" />
+        <p1 style = "font-family:tahoma, verdana, sans-serif; font-size:15px;font-style:italic;text-align:left">
+            <center>Thank you for volunteering to enter your data into our database. We rely on people like you to make our communities safer for everyone!<br></center>
+            <center>Please enter the location you are heading to and the number of people in your party, then login with your credentials.<br /></center>
+            <center><br /></center>
+        </p1>
+        <p2 style = "text-align:center">
+            <div class="container">
+                <form action="/addcount" method="post">
+                    Location: <input type="text" name="location">  <br />
+                    # of People: <input type="number" name="num" /> <br />
+                    Username: <input type="text" name = "user" /> <br />
+                    Password: <input type="text" name = "password" /> <br />
                 <input type="submit" name= "form" value="Submit" />
-            </form>
-        </p>
+                </form>
+            </div>
+        </p2>
     </body>
 </html>
